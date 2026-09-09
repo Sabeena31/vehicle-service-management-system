@@ -16,7 +16,7 @@ export default function Billing() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/service/invoices/${user.id}`
+        `https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/invoices/${user.id}`
       );
 
       const result = await res.json();
@@ -41,7 +41,7 @@ export default function Billing() {
   // ================= PAYMENT =================
   const handlePayment = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/service/pay", {
+      const res = await fetch("https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/pay", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
