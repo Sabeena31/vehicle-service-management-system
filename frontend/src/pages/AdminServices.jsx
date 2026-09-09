@@ -25,7 +25,7 @@ export default function AdminServices() {
       setLoading(true);
 
       const res = await fetch(
-        "http://localhost:5000/api/service/admin/all"
+        "https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/admin/all"
       );
       const data = await res.json();
 
@@ -43,7 +43,7 @@ export default function AdminServices() {
   const fetchMechanics = async () => {
     try {
       const res = await fetch(
-        "http://localhost:5000/api/auth/users"
+        "https://vehicle-service-management-system-production-5cde.up.railway.app/api/auth/users"
       );
 
       const data = await res.json();
@@ -59,7 +59,7 @@ export default function AdminServices() {
   // ================= UPDATE STATUS =================
   const updateStatus = async (id, status) => {
     await fetch(
-      `http://localhost:5000/api/service/admin/status/${id}`,
+      `https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/admin/status/${id}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
@@ -73,7 +73,7 @@ export default function AdminServices() {
   // ================= ASSIGN MECHANIC =================
   const assignMechanic = async (id, mechanicId) => {
     await fetch(
-      `http://localhost:5000/api/service/admin/assign/${id}`,
+      `https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/admin/assign/${id}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
@@ -89,7 +89,7 @@ export default function AdminServices() {
     if (!window.confirm("Delete this service?")) return;
 
     await fetch(
-      `http://localhost:5000/api/service/admin/delete/${id}`,
+      `https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/admin/delete/${id}`,
       {
         method: "DELETE",
       }
