@@ -47,7 +47,7 @@ export default function Service() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/vehicle/add", {
+      const res = await fetch("https://vehicle-service-management-system-production-5cde.up.railway.app/api/vehicle/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -80,7 +80,7 @@ export default function Service() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/vehicle/${user.id}`
+        `https://vehicle-service-management-system-production-5cde.up.railway.app/api/vehicle/${user.id}`
       );
       const data = await res.json();
       setVehicles(data);
@@ -92,7 +92,7 @@ export default function Service() {
   // ================= FETCH SERVICES =================
   const fetchServices = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/service/list");
+      const res = await fetch("https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/list");
       const data = await res.json();
       setServices(data);
     } catch (err) {
@@ -114,7 +114,7 @@ export default function Service() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/service/book", {
+      const res = await fetch("https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/book", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
