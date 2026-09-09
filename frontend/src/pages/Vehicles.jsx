@@ -10,7 +10,7 @@ export default function Vehicles() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/service/${user.id}`
+        `https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/${user.id}`
       );
 
       const data = await res.json();
