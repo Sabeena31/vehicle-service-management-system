@@ -8,7 +8,7 @@ router.post("/register", (req, res) => {
   const { name, email, password, role } = req.body;
 
   // 🔥 THIS IS THE FIX
-  const userRole = role || "user";
+  const userRole = role || "customer";
 
   const query = `
     INSERT INTO users (name, email, password, role)
