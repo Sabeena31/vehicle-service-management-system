@@ -18,7 +18,7 @@ export default function AdminDashboard() {
 
   const fetchData = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/service/admin/all");
+      const res = await fetch("https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/admin/all");
       const data = await res.json();
 
       const total = data.length;
