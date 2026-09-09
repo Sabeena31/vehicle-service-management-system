@@ -9,7 +9,7 @@ export default function MechanicDashboard() {
   const fetchData = async () => {
     try {
       const res = await fetch(
-        `http://localhost:5000/api/service/mechanic/${mechanic.id}`
+        `https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/mechanic/${mechanic.id}`
       );
 
       const data = await res.json();
@@ -27,7 +27,7 @@ export default function MechanicDashboard() {
   }, []);
 
   const updateStatus = async (id, status) => {
-    await fetch(`http://localhost:5000/api/service/admin/status/${id}`, {
+    await fetch(`https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/admin/status/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ status }),
