@@ -20,7 +20,7 @@ export default function Invoice() {
   const fetchInvoice = async () => {
     try {
       const res = await fetch(
-        `http://localhost:5000/api/service/invoice/${id}`
+        `https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/invoice/${id}`
       );
 
       const result = await res.json();
@@ -37,7 +37,7 @@ export default function Invoice() {
   // ================= PAYMENT =================
   const handlePayment = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/service/pay", {
+      const res = await fetch("https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/pay", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -62,7 +62,7 @@ export default function Invoice() {
   const submitFeedback = async () => {
     try {
       const res = await fetch(
-        "http://localhost:5000/api/service/feedback",
+        "https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/feedback",
         {
           method: "POST",
           headers: {
