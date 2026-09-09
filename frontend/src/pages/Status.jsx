@@ -11,7 +11,7 @@ export default function Status() {
 
     if (!user) return;
 
-    fetch(`http://localhost:5000/api/service/latest/${user.id}`)
+    fetch(`https://vehicle-service-management-system-production-5cde.up.railway.app/api/service/latest/${user.id}`)
       .then((res) => res.json())
       .then((result) => {
         if (result && result.id) {
