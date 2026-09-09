@@ -26,7 +26,7 @@ export default function AdminUsers() {
   // ================= FETCH USERS =================
   const fetchUsers = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/auth/users");
+      const res = await fetch("https://vehicle-service-management-system-production-5cde.up.railway.app/api/auth/users");
       const data = await res.json();
 
       if (Array.isArray(data)) {
@@ -55,7 +55,7 @@ export default function AdminUsers() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/register", {
+      const res = await fetch("https://vehicle-service-management-system-production-5cde.up.railway.app/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -89,7 +89,7 @@ export default function AdminUsers() {
     if (!window.confirm("Delete this user?")) return;
 
     try {
-      await fetch(`http://localhost:5000/api/auth/delete/${id}`, {
+      await fetch(`https://vehicle-service-management-system-production-5cde.up.railway.app/api/auth/delete/${id}`, {
         method: "DELETE",
       });
 
